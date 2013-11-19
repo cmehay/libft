@@ -6,7 +6,7 @@
 #    By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 15:09:23 by cmehay            #+#    #+#              #
-#    Updated: 2013/11/19 19:01:06 by cmehay           ###   ########.fr        #
+#    Updated: 2013/11/19 19:41:19 by cmehay           ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -15,7 +15,7 @@ SRCDIR = .
 HEADDIR = .
 HEAD = libft.h
 HEADFILES = $(addprefix $(HEADDIR)/, $(HEAD))
-SRC = ft_memset.c ft_putchar.c ft_putstr.c
+SRC = ft_memset.c ft_putchar.c ft_putstr.c ft_bzero.c
 SRCFILES = $(addprefix $(SRCDIR)/, $(SRC))
 OBJ = $(SRC:.c=.o)
 CC = gcc
