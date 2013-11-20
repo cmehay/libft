@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 09:54:04 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/20 09:55:47 by cmehay           ###   ########.fr       */
+/*   Created: 2013/11/19 18:48:48 by cmehay            #+#    #+#             */
+/*   Updated: 2013/11/20 09:56:42 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	ft_putchar_fd(c, 1);
+	int	i;
+	
+	i = 0;
+	while (s[i] != 0)
+	{
+		ft_putchar_fd(s[i++], fd);
+	}
 }

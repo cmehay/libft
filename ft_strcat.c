@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 09:54:04 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/20 09:55:47 by cmehay           ###   ########.fr       */
+/*   Created: 2013/11/20 15:23:31 by cmehay            #+#    #+#             */
+/*   Updated: 2013/11/20 15:58:57 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+char	*ft_strcat(char *restrict s1, const char *restrict s2)
 {
-	ft_putchar_fd(c, 1);
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	while (s1[i] != 0)
+		i++;
+	while (s2[j] != 0)
+		s1[i++] = s2[j++];
+	s1[i + 1] = 0;
+	return (s1);
 }
