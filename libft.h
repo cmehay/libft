@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/20 18:43:42 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/21 11:36:57 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,16 @@ void	ft_putnbr(int n);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putendl(char const *s);
 size_t	ft_strlen(char const *s);
-char	*ft_strcat(char *restrict s1, const char *restrict s2);
-char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
+char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
 char	*ft_strtrim(char const *s);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_atoi(const char *str);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 
 #endif

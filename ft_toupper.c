@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 15:23:31 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/21 09:37:58 by cmehay           ###   ########.fr       */
+/*   Created: 2013/11/19 16:04:34 by cmehay            #+#    #+#             */
+/*   Updated: 2013/11/21 11:10:52 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+int	ft_toupper(int c)
 {
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	j = 0;
-	while (s1[i] != 0)
-		i++;
-	while (s2[j] != 0)
-		s1[i++] = s2[j++];
-	s1[i + 1] = 0;
-	return (s1);
+	if (c > 0x60 && c <= 0x7A)
+		return (c - 0x20);
+	return (c);
 }

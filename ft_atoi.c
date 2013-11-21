@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 15:23:31 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/21 09:37:58 by cmehay           ###   ########.fr       */
+/*   Created: 2013/11/21 07:17:18 by cmehay            #+#    #+#             */
+/*   Updated: 2013/11/21 10:43:34 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+int	atoi(const char *str)
 {
-	size_t	i;
-	size_t	j;
+	char	*trim;
+	int		i;
+	int		mul;
+	int		rtn;
 
+	trim = ft_strtrim(str);
 	i = 0;
-	j = 0;
-	while (s1[i] != 0)
+	mul = 1;
+	rtn = 0;
+	while (ft_isdigit(str[i]))
 		i++;
-	while (s2[j] != 0)
-		s1[i++] = s2[j++];
-	s1[i + 1] = 0;
-	return (s1);
+	while (i > 0)
+	{
+		rtn += (str[i-- - 1] - 0x30) * mul;
+		mul *= 10;
+	}
+	return (rtn);
 }
