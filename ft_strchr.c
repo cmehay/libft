@@ -6,9 +6,16 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:44:59 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/22 14:48:38 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/22 15:50:26 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+char	*ft_strchr(const char *s, int c)
+{
+	size_t i;
+
+	i = ft_strlen(s);
+	return (ft_memchr(s, (char) c, i + 1));
+}
