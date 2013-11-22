@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 07:17:18 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/22 07:09:38 by cmehay           ###   ########.fr       */
+/*   Created: 2013/11/21 14:49:13 by cmehay            #+#    #+#             */
+/*   Updated: 2013/11/22 07:57:34 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	*ft_memcpy(void *s1, void *s2, size_t n)
 {
-	char	*trim;
-	int		i;
-	int		mul;
-	int		rtn;
+	char	*s1_cp;
+	char	*s2_cp;
+	size_t	i;
 
-	trim = ft_strtrim(str);
+	s1_cp = s1;
+	s2_cp = s2;
 	i = 0;
-	mul = 1;
-	rtn = 0;
-	while (ft_isdigit(trim[i]))
-		i++;
-	while (i > 0)
+	while (i < n)
 	{
-		rtn += (trim[i-- - 1] - 0x30) * mul;
-		mul *= 10;
+		s1_cp[i] = s2_cp[i];
+		i++;
 	}
-	return (rtn);
+	return (s1);
 }

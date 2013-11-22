@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/21 11:36:57 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/22 11:27:44 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,11 @@ int		ft_isprint(int c);
 int		ft_atoi(const char *str);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+void	*ft_memalloc(size_t size);
+char	*ft_strnew(size_t size);
+void	*ft_memcpy(void *s1, void *s2, size_t n);
+void	*ft_memccpy(void *s1, void *s2, int c, size_t n);
+void	*ft_memmove(void *s1, void *s2, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
 
 #endif

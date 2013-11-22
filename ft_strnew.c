@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 07:17:18 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/22 07:09:38 by cmehay           ###   ########.fr       */
+/*   Created: 2013/11/21 14:01:54 by cmehay            #+#    #+#             */
+/*   Updated: 2013/11/21 14:08:26 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strnew(size_t size)
 {
-	char	*trim;
-	int		i;
-	int		mul;
-	int		rtn;
+	char	*rtn;
 
-	trim = ft_strtrim(str);
-	i = 0;
-	mul = 1;
-	rtn = 0;
-	while (ft_isdigit(trim[i]))
-		i++;
-	while (i > 0)
-	{
-		rtn += (trim[i-- - 1] - 0x30) * mul;
-		mul *= 10;
-	}
+	rtn = ft_memalloc(size + 1);
 	return (rtn);
 }

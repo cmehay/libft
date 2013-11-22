@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 07:17:18 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/22 07:09:38 by cmehay           ###   ########.fr       */
+/*   Created: 2013/11/21 14:49:13 by cmehay            #+#    #+#             */
+/*   Updated: 2013/11/22 11:31:08 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*trim;
-	int		i;
-	int		mul;
-	int		rtn;
+	char	*s_cp;
+	size_t	i;
 
-	trim = ft_strtrim(str);
+	s_cp = (char*) s;
 	i = 0;
-	mul = 1;
-	rtn = 0;
-	while (ft_isdigit(trim[i]))
-		i++;
-	while (i > 0)
+	while (i < n)
 	{
-		rtn += (trim[i-- - 1] - 0x30) * mul;
-		mul *= 10;
+		if (s_cp[i++] == (unsigned char) c)
+			return (s_cp + (i - 1));
 	}
-	return (rtn);
+	return (NULL);
 }
