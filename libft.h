@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/23 14:57:13 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/23 20:09:49 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-
-#define MIN(a, b) (a <= b ? a : b)
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -58,11 +56,11 @@ int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strstr(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
+void	ft_memdel(void **ap);
 
 /*not yet done*/
 
 
-void	ft_memdel(void **ap);
 void	ft_strdel(char **as);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
