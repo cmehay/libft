@@ -6,29 +6,40 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/21 07:17:18 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/22 07:09:38 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/23 17:49:06 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+static char	*atoi_shift(char *s)
 {
-	char	*trim;
-	int		i;
+	while ((*s > 8 && *s < 14) || *s == 32)
+		s++;
+	return (s);
+}
+
+int			ft_atoi(const char *str)
+{
+	char	*shift;
+	size_t	i;
 	int		mul;
 	int		rtn;
+	int		neg;
 
-	trim = ft_strtrim(str);
+	shift = atoi_shift((char*) str);
 	i = 0;
 	mul = 1;
 	rtn = 0;
-	while (ft_isdigit(trim[i]))
+	neg = 1 - ((shift[i] == '-') * 2);
+	if (shift[i] == '-' || shift[i] == '+')
 		i++;
-	while (i > 0)
+	while (ft_isdigit(shift[i]))
+		i++;
+	while (i > (shift[0] == '-' || shift[0] == '+'))
 	{
-		rtn += (trim[i-- - 1] - 0x30) * mul;
+		rtn += (shift[i-- - 1] - 0x30) * mul;
 		mul *= 10;
 	}
-	return (rtn);
+	return (rtn * neg);
 }
