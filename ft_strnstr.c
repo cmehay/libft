@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:59:37 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/23 13:56:19 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/23 19:33:14 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char    *ft_strnstr(const char *s1, const char *s2, size_t n)
 		return ((char*) s1);
 	i = 0;
 	s2_len = ft_strlen(s2);
-	while (*s1 != 0 && i < n)
+	while (*s1 != 0 && i < n && (i + s2_len <= n))
 	{
 		if (ft_memcmp(s1, s2, s2_len) == 0)
 			return ((char*) s1);
