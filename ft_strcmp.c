@@ -6,13 +6,15 @@
 /*   By: cmehay <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/08/19 14:16:04 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/23 11:18:41 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/23 11:44:41 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	unsigned int	i;
+	size_t			i;
 	unsigned char	comp1;
 	unsigned char	comp2;
 

@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:41:45 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/23 07:45:00 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/23 11:51:49 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	src_len = ft_strlen(src);
 	catsize = (long long int) size - dst_len - 1;
 	ft_strncat(dst, src, catsize * (catsize > 0));
-	return (src_len + ft_min(size, dst_len));
+	return (src_len + MIN(size, dst_len));
 }

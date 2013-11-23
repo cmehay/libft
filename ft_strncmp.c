@@ -3,13 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cmehay <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/22 15:03:38 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/22 15:04:20 by cmehay           ###   ########.fr       */
+/*   Created: 2013/08/19 14:16:04 by cmehay            #+#    #+#             */
+/*   Updated: 2013/11/23 13:33:48 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	size_t			i;
+	unsigned char	comp1;
+	unsigned char	comp2;
 
+	i = 0;
+	while ((s1[i] == s2[i]) && (s1[i] != '\0') && (i < n))
+		i++;
+	comp1 = s1[i];
+	comp2 = s2[i];
+	return ((comp1 - comp2) * (n > 0));
+}

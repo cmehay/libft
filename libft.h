@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/23 10:49:12 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/23 11:52:05 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 #include <unistd.h>
 #include <string.h>
 
-#define ft_max(a,b) (a >= b ? a : b)
-#define ft_min(a,b) (a <= b ? a : b)
+#define MIN(a, b) (a <= b ? a : b)
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
