@@ -6,17 +6,17 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/21 14:49:13 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/22 11:53:09 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/23 08:52:02 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *s1, void *s2, int c, size_t n)
+void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 {
-	char	*s1_cp;
-	char	*s2_cp;
-	size_t	i;
+	char		*s1_cp;
+	const char	*s2_cp;
+	size_t		i;
 
 	s1_cp = s1;
 	s2_cp = s2;

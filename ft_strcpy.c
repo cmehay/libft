@@ -6,10 +6,14 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 15:07:08 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/22 15:08:01 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/23 08:44:08 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
+char	*ft_strcpy(char *s1, const char *s2)
+{
+	ft_memcpy(s1, s2, ft_strlen(s2) + 1);
+	return (s1);
+}
