@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 10:10:23 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/20 10:13:01 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/24 15:12:24 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putnbr_fd(int n, int fd)
 		{
 			ft_putchar_fd('-', fd);
 		}
-		usgn_copy = n * ((n > 0) + (n > 0) -1);
+		usgn_copy = n * ((n > 0) + (n > 0) - 1);
 		nb_size = 1;
 		nb_copy = usgn_copy;
 		while (nb_copy / 10 > 0)
