@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 14:59:37 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/23 19:33:14 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/24 12:55:42 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char    *ft_strnstr(const char *s1, const char *s2, size_t n)
 	size_t	s2_len;
 	size_t	i;
 
-	if (s2_len == 0)
+	if (s2_len == 0 || n == 0 || *s2 == 0)
 		return ((char*) s1);
 	i = 0;
 	s2_len = ft_strlen(s2);
