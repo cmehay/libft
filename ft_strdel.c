@@ -6,8 +6,14 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 15:18:31 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/22 15:18:52 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/25 16:46:05 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_strdel(char **as)
+{
+	free(as);
+	as = NULL;
+}
