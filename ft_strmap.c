@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 15:25:44 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/25 10:52:12 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/26 08:16:15 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	size_t	i;
 
 	i = 0;
-	if ((rtn = ft_strnew(strlen(s))) != NULL)
+	if ((rtn = ft_strnew(ft_strlen(s))) != NULL)
 	{
 		while (s[i] != 0)
 		{
