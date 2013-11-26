@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 15:27:25 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/25 11:13:44 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/26 08:30:08 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	if ((rtn = ft_strnew(len)) == NULL)
+	if ((rtn = ft_strnew(len)) != NULL)
 	{
 		while (i < len)
 		{
