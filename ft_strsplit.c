@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 15:28:25 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/26 11:02:09 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/28 15:54:24 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,24 +49,24 @@ static int		add_str(char **to, char const *from, char c, int index)
 char	**ft_strsplit(char const *s, char c)
 {
 	char	**rtn;
-	char	*tmp;
 	size_t	i;
 	int		j;
+	int		add;
 
 	if ((rtn = (char**) malloc(word_counter(s, c) * sizeof(char*))) == NULL)
 		return (NULL);
-	tmp = (char*) s;
 	i = 1;
 	j = 0;
-	if (*tmp != c)
-		if ((i = add_str(rtn, tmp, c, j++)) == 0)
+	if (*s != c)
+		if ((i = add_str(rtn, s, c, j++)) == 0)
 			return (NULL);
-	while (tmp[i] != 0)
+	while (s[i] != 0)
 	{
-		if ((tmp[i] != c && tmp[i - 1] == c))
+		if ((s[i] != c && s[i - 1] == c))
 		{
-			if ((i += add_str(rtn, tmp + i, c, j++)) == 0)
+			if ((add = add_str(rtn, s + i, c, j++)) == 0)
 				return (NULL);
+			i += add;
 		}
 		else
 			i++;
