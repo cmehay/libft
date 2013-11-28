@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 15:28:25 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/28 15:54:24 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/11/28 16:22:54 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	**ft_strsplit(char const *s, char c)
 	int		j;
 	int		add;
 
-	if ((rtn = (char**) malloc(word_counter(s, c) * sizeof(char*))) == NULL)
+	if ((rtn = (char**) malloc((word_counter(s, c) + 1) * sizeof(char*))) == NULL)
 		return (NULL);
 	i = 1;
 	j = 0;
@@ -71,5 +71,6 @@ char	**ft_strsplit(char const *s, char c)
 		else
 			i++;
 	}
+	rtn[j] = NULL;
 	return (rtn);
 }
