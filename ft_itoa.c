@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static	char	*ft_initmem(int size, int n)
+static char		*ft_initmem(int size, int n)
 {
 	char	*str;
 
@@ -22,7 +22,7 @@ static	char	*ft_initmem(int size, int n)
 	return (str);
 }
 
-static	char	*ft_charcat(char *s1, char c)
+static char		*ft_charcat(char *s1, char c)
 {
 	int	i;
 
@@ -34,7 +34,7 @@ static	char	*ft_charcat(char *s1, char c)
 	return (s1);
 }
 
-static void	ft_itoa_cmp(int n, char *str)
+static void		ft_itoa_cmp(int n, char *str)
 {
 
 	unsigned int	usgn_copy;
@@ -62,7 +62,7 @@ static void	ft_itoa_cmp(int n, char *str)
 	}
 }
 
-char *ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	unsigned int	usgn_cp;
 	int				nb_size;

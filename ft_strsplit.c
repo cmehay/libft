@@ -46,14 +46,14 @@ static int		add_str(char **to, char const *from, char c, int index)
 	return (rtn);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**rtn;
 	size_t	i;
 	int		j;
 	int		add;
 
-	if ((rtn = (char**) malloc((word_counter(s, c) + 1) * sizeof(char*))) == NULL)
+	if (! (rtn = (char**) malloc((word_counter(s, c) + 1) * sizeof(char*))))
 		return (NULL);
 	i = 1;
 	j = 0;
