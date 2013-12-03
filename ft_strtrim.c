@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 18:07:55 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/23 16:34:12 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/12/03 16:58:31 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strtrim(char const *s)
 
 	len = ft_strlen(s) - 1;
 	if ((int) len == -1)
-		return ((char*) s);
+		return (ft_strnew(1));
 	start = 0;
 	i = 0;
 	while (s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
