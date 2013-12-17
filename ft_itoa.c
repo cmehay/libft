@@ -6,13 +6,13 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 10:10:23 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/26 08:35:55 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/12/17 12:21:29 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*ft_initmem(int size, int n)
+static char		*ft_initmem(int size, int64_t n)
 {
 	char	*str;
 
@@ -34,13 +34,13 @@ static char		*ft_charcat(char *s1, char c)
 	return (s1);
 }
 
-static void		ft_itoa_cmp(int n, char *str)
+static void		ft_itoa_cmp(int64_t n, char *str)
 {
 
-	unsigned int	usgn_copy;
-	int				nb_size;
-	int				nb_copy;
-	int				nb_print;
+	uint64_t	usgn_copy;
+	int64_t		nb_size;
+	int64_t		nb_copy;
+	int64_t		nb_print;
 
 	if (n < 0)
 		ft_charcat(str, '-');
@@ -62,11 +62,11 @@ static void		ft_itoa_cmp(int n, char *str)
 	}
 }
 
-char		*ft_itoa(int n)
+char		*ft_itoa(int64_t n)
 {
-	unsigned int	usgn_cp;
-	int				nb_size;
-	char			*rtn;
+	uint64_t	usgn_cp;
+	int64_t		nb_size;
+	char		*rtn;
 
 	usgn_cp = n * ((n > 0) + (n > 0) - 1);
 	nb_size = 1;

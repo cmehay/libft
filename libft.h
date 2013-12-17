@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/28 06:21:03 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/12/17 12:27:07 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <stdint.h>
 
 # define TRUE 1
 # define FALSE 0
@@ -32,8 +33,8 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putchar(char c);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putstr(char const *s);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putnbr(int n);
+void	ft_putnbr_fd(int64_t n, int fd);
+void	ft_putnbr(int64_t n);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putendl(char const *s);
 size_t	ft_strlen(char const *s);
@@ -66,7 +67,7 @@ char	*ft_strstr(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 void	ft_memdel(void **ap);
-char	*ft_itoa(int n);
+char	*ft_itoa(int64_t n);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 void	ft_strdel(char **as);

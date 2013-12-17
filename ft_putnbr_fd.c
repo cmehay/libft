@@ -6,18 +6,18 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 10:10:23 by cmehay            #+#    #+#             */
-/*   Updated: 2013/12/02 15:08:38 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/12/17 12:24:42 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int64_t n, int fd)
 {
-	unsigned int	usgn_copy;
-	int				nb_size;
-	int				nb_copy;
-	int				nb_print;
+	uint64_t	usgn_copy;
+	int64_t		nb_size;
+	int64_t		nb_copy;
+	int64_t		nb_print;
 
 	if (n < 0)
 	{
