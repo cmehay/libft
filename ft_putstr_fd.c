@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 18:48:48 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/23 13:26:12 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/12/17 12:35:20 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != 0)
-		ft_putchar_fd(s[i++], fd);
+	write(fd, s, ft_strlen(s));
 }
