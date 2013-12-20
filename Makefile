@@ -24,12 +24,12 @@ SRC = ft_memset.c ft_putchar.c ft_putstr.c ft_bzero.c ft_putchar_fd.c \
 	ft_strrchr.c ft_strstr.c ft_strnstr.c ft_strcmp.c ft_strncmp.c ft_memdel.c \
 	ft_strdel.c ft_strclr.c ft_striter.c ft_striteri.c ft_strmap.c \
 	ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c \
-	ft_strsplit.c ft_strcpy.c ft_strncpy.c ft_itoa.c
+	ft_strsplit.c ft_strcpy.c ft_strncpy.c ft_itoa.c get_next_line.c
 SRCFILES = $(addprefix $(SRCDIR)/, $(SRC))
 OBJ = $(SRC:.c=.o)
 CC = gcc
 AR = ar
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -g -Wall -Werror -Wextra
 
 all: $(NAME)
 

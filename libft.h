@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2013/12/17 12:27:07 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/12/18 19:49:12 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 
 # define TRUE 1
 # define FALSE 0
+
+# define BUFF_SIZE 200
 
 typedef struct	s_strlen
 {
@@ -79,5 +81,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_strsplit(char const *s, char c);
+int		get_next_line(int const fd, char **line);
 
 #endif
