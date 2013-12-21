@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2013/12/18 19:49:12 by cmehay           ###   ########.fr       */
+/*   Updated: 2013/12/21 01:14:07 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,11 @@
 # include <string.h>
 # include <stdint.h>
 
-# define TRUE 1
-# define FALSE 0
+typedef enum	e_bool
+{
+	FALSE,
+	TRUE
+}				t_bool;
 
 # define BUFF_SIZE 200
 
