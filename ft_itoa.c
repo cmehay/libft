@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 10:10:23 by cmehay            #+#    #+#             */
-/*   Updated: 2013/12/17 12:21:29 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/02/10 18:02:39 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ static char		*ft_charcat(char *s1, char c)
 
 static void		ft_itoa_cmp(int64_t n, char *str)
 {
-
 	uint64_t	usgn_copy;
 	int64_t		nb_size;
 	int64_t		nb_copy;

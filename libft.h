@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2013/12/21 01:14:07 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/02/10 18:01:12 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ typedef struct	s_strlen
 	size_t	s1;
 	size_t	s2;
 }				t_strlen;
+
+typedef struct	s_alloc_lst
+{
+	ssize_t				ptr;
+	struct s_alloc_lst	*next;
+}				t_alloc_lst;
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -85,5 +91,12 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_strsplit(char const *s, char c);
 int		get_next_line(int const fd, char **line);
+
+/*
+** mem_lst.c
+*/
+void	add_to_lst(void *ptr);
+void	*cool_malloc(size_t len);
+void	cool_free(void *ptr);
 
 #endif
