@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2014/02/11 13:27:51 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/02/11 13:44:25 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ char	*ft_strstr(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 void	ft_memdel(void **ap);
+void	ft_arraydel(char **array);
 char	*ft_itoa(int64_t n);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
@@ -107,6 +108,7 @@ char	*cool_strnew(size_t size);
 char	*cool_itoa(int64_t n);
 void	cool_strdel(char **as);
 void	cool_memdel(void **ap);
+void	cool_arraydel(char **array);
 char	*cool_strdup(const char *s1);
 char	*cool_strjoin(char const *s1, char const *s2);
 char	*cool_strmap(char const *s, char (*f)(char));
