@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 19:33:28 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/19 19:38:54 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/02/11 11:54:42 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 	size_t	i;
 
 	i = 0;
-	tmp = s;
+	tmp = (char*)s;
 	while (i < n)
 	{
 		tmp[i++] = 0;

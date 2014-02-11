@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 15:18:31 by cmehay            #+#    #+#             */
-/*   Updated: 2013/11/26 07:44:25 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/02/11 11:57:08 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,11 @@
 void	ft_strdel(char **as)
 {
 	free(*as);
+	*as = NULL;
+}
+
+void	cool_strdel(char **as)
+{
+	cool_free(*as);
 	*as = NULL;
 }

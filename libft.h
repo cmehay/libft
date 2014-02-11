@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2014/02/10 18:01:12 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/02/11 13:27:51 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,24 @@ int		get_next_line(int const fd, char **line);
 void	add_to_lst(void *ptr);
 void	*cool_malloc(size_t len);
 void	cool_free(void *ptr);
+
+/*
+** Cool functions
+** Those functions use cool_malloc instead of malloc
+*/
+char	*cool_strnew(size_t size);
+char	*cool_itoa(int64_t n);
+void	cool_strdel(char **as);
+void	cool_memdel(void **ap);
+char	*cool_strdup(const char *s1);
+char	*cool_strjoin(char const *s1, char const *s2);
+char	*cool_strmap(char const *s, char (*f)(char));
+char	*cool_strmapi(char const *s, char (*f)(unsigned int, char));
+char	**cool_strsplit(char const *s, char c);
+char	*cool_strsub(char const *s, unsigned int start, size_t len);
+char	*cool_strtrim(char const *s);
+int		cool_next_line(int const fd, char **line);
+
+
 
 #endif

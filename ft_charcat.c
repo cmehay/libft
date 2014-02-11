@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_charcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/22 15:17:12 by cmehay            #+#    #+#             */
-/*   Updated: 2014/02/11 13:27:39 by cmehay           ###   ########.fr       */
+/*   Created: 2013/11/24 16:25:01 by cmehay            #+#    #+#             */
+/*   Updated: 2013/11/24 16:31:31 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+/*
+** This function adds char c at the end of s1 string and adds '\0'.
+** s1 is returned.
+*/
+char	*ft_charcat(char *s1, char c)
 {
-	free(*ap);
-	*ap = NULL;
-}
+	int	i;
 
-void	cool_memdel(void **ap)
-{
-	cool_free(*ap);
-	*ap = NULL;
+	i = 0;
+	while (s1[i])
+		i++;
+	s1[i] = c;
+	s1[i + 1] = 0;
+	return (s1);
 }
