@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2014/03/08 10:33:09 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/03/08 10:34:07 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,6 @@ int		get_next_line(int const fd, char **line);
 int		ft_strtest(char *str, int (*f)(int));
 char	*ft_strrep(char *s1, char *s2, char *str);
 
-
 /*
 ** mem_lst.c
 */
@@ -107,7 +106,6 @@ void	add_to_lst(void *ptr);
 void	*cool_malloc(size_t len);
 void	cool_free(void *ptr);
 void	free_for_all(t_alloc_lst *lst);
-
 
 /*
 ** Cool functions
@@ -127,6 +125,5 @@ char	*cool_strsub(char const *s, unsigned int start, size_t len);
 char	*cool_strtrim(char const *s);
 int		cool_next_line(int const fd, char **line);
 char	*cool_strrep(char *s1, char *s2, char *str);
-
 
 #endif
