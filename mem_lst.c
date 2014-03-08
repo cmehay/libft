@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/29 11:23:20 by cmehay            #+#    #+#             */
-/*   Updated: 2014/03/08 10:26:42 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/03/08 10:32:06 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void				cool_free(void *ptr)
 }
 
 /*
-** This function frees all malloced memory
+** This function frees all allocated memory
 */
 void				free_for_all(t_alloc_lst *lst)
 {
@@ -98,4 +98,6 @@ void				free_for_all(t_alloc_lst *lst)
 		free((void*)lst->ptr);
 		free(lst);
 	}
+	else
+		lst->next = NULL;
 }
