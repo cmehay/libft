@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/12/29 11:23:20 by cmehay            #+#    #+#             */
-/*   Updated: 2014/02/10 17:58:26 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/03/08 10:26:42 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,22 @@ void				cool_free(void *ptr)
 	{
 		free(ptr);
 		prev->next = NULL;
+		free(lst);
+	}
+}
+
+/*
+** This function frees all malloced memory
+*/
+void				free_for_all(t_alloc_lst *lst)
+{
+	if (!lst)
+		lst = gimme_ptr_lst();
+	if (lst->next)
+		free_for_all(lst->next);
+	if (lst->ptr && lst->ptr != -1)
+	{
+		free((void*)lst->ptr);
 		free(lst);
 	}
 }

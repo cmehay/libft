@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/25 00:41:40 by cmehay            #+#    #+#             */
-/*   Updated: 2014/02/25 01:24:28 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/03/08 09:54:57 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static char	*cool_new_str(char *s1, int s2_len, char *str)
 	return (cool_strnew(str_len + ((s2_len - s1_len) * i)));
 }
 
-char			*ft_strrep(char *s1, char *s2, char *str)
+char		*ft_strrep(char *s1, char *s2, char *str)
 {
 	char	*rtn;
 	char	*str_srch;
@@ -77,7 +77,7 @@ char			*ft_strrep(char *s1, char *s2, char *str)
 	return (rtn);
 }
 
-char			*cool_strrep(char *s1, char *s2, char *str)
+char		*cool_strrep(char *s1, char *s2, char *str)
 {
 	char	*rtn;
 	char	*str_srch;
