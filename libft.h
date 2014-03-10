@@ -93,7 +93,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_strsplit(char const *s, char c);
 
 /*
-** Addum
+** Additum
 */
 int		get_next_line(int const fd, char **line);
 int		ft_strtest(char *str, int (*f)(int));
