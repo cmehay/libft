@@ -26,22 +26,24 @@ SRC = ft_memset.c ft_putchar.c ft_putstr.c ft_bzero.c ft_putchar_fd.c \
 	ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c \
 	ft_strsplit.c ft_strcpy.c ft_strncpy.c ft_itoa.c get_next_line.c \
 	mem_lst.c cool_itoa.c cool_next_line.c ft_arraydel.c ft_strtest.c \
-	ft_strrep.c
+	ft_strrep.c ft_higher.c ft_lower.c
 SRCFILES = $(addprefix $(SRCDIR)/, $(SRC))
 OBJ = $(SRC:.c=.o)
 CC = gcc
 AR = ar
+RANLIB = ranlib
 CFLAGS = -g -Wall -Werror -Wextra
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(AR) rc $(NAME) $(OBJ)
+	$(RANLIB) $(NAME)
 
-$(OBJ): $(SRCFILES)
-	$(CC) $(CFLAGS) -I$(HEADDIR) -c $?
+%.o: %.c $(HEADFILES)
+	$(CC) $(CFLAGS) -I$(HEADDIR) -c -o $@ $<
 
-.PHONY: clean fclean re
+.PHONY: all clean fclean re
 
 clean:
 	/bin/rm -f $(OBJ)
