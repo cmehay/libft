@@ -29,10 +29,10 @@ SRC = ft_memset.c ft_putchar.c ft_putstr.c ft_bzero.c ft_putchar_fd.c \
 	ft_strrep.c ft_higher.c ft_lower.c
 SRCFILES = $(addprefix $(SRCDIR)/, $(SRC))
 OBJ = $(SRC:.c=.o)
-CC = gcc
+CC = clang
 AR = ar
 RANLIB = ranlib
-CFLAGS = -O3 -Wall -Werror -Wextra
+CFLAGS = -O3 -g -Wall -Werror -Wextra
 
 all: $(NAME)
 
