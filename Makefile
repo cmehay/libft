@@ -6,7 +6,7 @@
 #    By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 15:09:23 by cmehay            #+#    #+#              #
-#    Updated: 2013/11/26 11:09:29 by cmehay           ###   ########.fr        #
+#    Updated: 2014/03/12 15:00:17 by cmehay           ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -32,7 +32,7 @@ OBJ = $(SRC:.c=.o)
 CC = gcc
 AR = ar
 RANLIB = ranlib
-CFLAGS = -g -Wall -Werror -Wextra
+CFLAGS = -O3 -Wall -Werror -Wextra
 
 all: $(NAME)
 
