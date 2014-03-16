@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2014/03/09 18:56:03 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/03/16 10:48:55 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ int		ft_lower_idx(int *array, int len);
 /*
 ** mem_lst.c
 */
-void	add_to_lst(void *ptr);
+t_bool	add_to_lst(void *ptr);
 void	*cool_malloc(size_t len);
 void	cool_free(void *ptr);
 void	free_for_all(t_alloc_lst *lst);
