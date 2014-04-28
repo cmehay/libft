@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2014/03/09 18:56:03 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/04/28 14:28:14 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ int		ft_higher(int *array, int len);
 int		ft_higher_idx(int *array, int len);
 int		ft_lower(int *array, int len);
 int		ft_lower_idx(int *array, int len);
+
 
 /*
 ** mem_lst.c
