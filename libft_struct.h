@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtest.c                                       :+:      :+:    :+:   */
+/*   libft_struct.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/02/13 01:33:47 by cmehay            #+#    #+#             */
-/*   Updated: 2014/05/03 15:19:52 by cmehay           ###   ########.fr       */
+/*   Created: 2014/05/03 15:21:40 by cmehay            #+#    #+#             */
+/*   Updated: 2014/05/03 15:23:27 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_STRUCT_H
+# define LIBFT_STRUCT_H
 
-/*
-** This function test a string with a function
-*/
-int	ft_strtest(char *str, int (*f)(int))
+# include <stdlib.h>
+# include <unistd.h>
+# include <string.h>
+# include <stdint.h>
+
+typedef enum	e_bool
 {
-	if (!str || !*str)
-		return (0);
-	while (*str)
-	{
-		if (!f((int)*(str++)))
-			return (0);
-	}
-	return (1);
-}
+	FALSE,
+	TRUE
+}				t_bool;
+
+typedef struct	s_strlen
+{
+	size_t	s1;
+	size_t	s2;
+}				t_strlen;
+
+typedef struct	s_alloc_lst
+{
+	ssize_t				ptr;
+	struct s_alloc_lst	*next;
+}				t_alloc_lst;
+
+#endif

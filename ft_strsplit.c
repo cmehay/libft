@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/22 15:28:25 by cmehay            #+#    #+#             */
-/*   Updated: 2014/02/11 12:05:17 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/05/03 15:19:14 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,4 +119,3 @@ char			**cool_strsplit(char const *s, char c)
 	rtn[j] = NULL;
 	return (rtn);
 }
-

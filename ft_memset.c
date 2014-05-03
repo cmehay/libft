@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:31:44 by cmehay            #+#    #+#             */
-/*   Updated: 2014/02/10 18:03:24 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/05/03 15:17:55 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memset(void *b, int c, size_t len)
 	size_t	i;
 
 	i = 0;
-	tmp = (char*) b;
+	tmp = (char*)b;
 	while (i < len)
-		tmp[i++] = (unsigned char) c;
+		tmp[i++] = (unsigned char)c;
 	return (b);
 }

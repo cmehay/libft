@@ -6,37 +6,16 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 16:05:29 by cmehay            #+#    #+#             */
-/*   Updated: 2014/04/28 14:34:47 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/05/03 15:24:32 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
-# include <stdint.h>
-
-typedef enum	e_bool
-{
-	FALSE,
-	TRUE
-}				t_bool;
+# include "libft_struct.h"
 
 # define BUFF_SIZE 200
-
-typedef struct	s_strlen
-{
-	size_t	s1;
-	size_t	s2;
-}				t_strlen;
-
-typedef struct	s_alloc_lst
-{
-	ssize_t				ptr;
-	struct s_alloc_lst	*next;
-}				t_alloc_lst;
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -102,7 +81,6 @@ int		ft_higher(int *array, int len);
 int		ft_higher_idx(int *array, int len);
 int		ft_lower(int *array, int len);
 int		ft_lower_idx(int *array, int len);
-
 
 /*
 ** mem_lst.c
